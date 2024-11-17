@@ -1,1 +1,117 @@
-project จบ model CNN+LSTM
+
+# 🚑 Human Accident Forecasting System
+
+## 📖 Project Description
+This project aims to forecast human accidents using a **CNN+LSTM model**. The system utilizes an **ESP32 board** for data collection and processes the data using Python. It includes a web interface for monitoring and visualizing predictions.
+
+---
+
+## 🛠️ Technologies Used
+
+### Hardware
+- **🔌 ESP32 Board**
+  - Programmed using MicroPython
+  - Collects sensor data related to human activity
+
+### Software
+- **⚙️ MicroPython**: For programming the ESP32
+- **🐍 Python**: For data processing and model creation
+- **🌐 Web Interface**: For monitoring results
+- **💾 Frameworks:**
+  - TensorFlow (for CNN+LSTM model)
+  - Flask (for serving the web application)
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+Ensure the following are installed or available:
+- **Python** (v3.8 or later)
+- **MicroPython** on ESP32 board
+- Required Python libraries (listed in `requirements.txt`)
+
+### 📥 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd <project_directory>
+   ```
+
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Flash MicroPython onto ESP32:
+   - Follow [this guide](https://micropython.org/) to flash MicroPython firmware onto your ESP32 board.
+   - Upload `esp32_data_collector.py` to the ESP32 using tools like **ampy** or **Thonny**.
+
+4. Set up the environment variables for the web application:
+   - Create a `.env` file:
+     ```
+     FLASK_APP=app.py
+     FLASK_ENV=development
+     ```
+
+---
+
+## 📂 Project Structure
+```
+project_directory/
+├── data/               # Collected sensor data
+├── models/             # Trained CNN+LSTM model
+├── esp32/              # MicroPython scripts for ESP32
+├── web_app/            # Flask web application
+│   ├── templates/      # HTML templates
+│   ├── static/         # CSS/JS for UI
+├── app.py              # Main Flask app
+└── requirements.txt    # Python dependencies
+```
+
+---
+
+## 👨‍💻 Development and Usage
+
+### Running the Web Application
+1. Start the Flask server:
+   ```bash
+   flask run
+   ```
+2. Access the web application at `http://localhost:5000`.
+
+### Training the Model
+1. Prepare your dataset and place it in the `data/` directory.
+2. Run the training script:
+   ```bash
+   python train_model.py
+   ```
+
+### Using the ESP32
+1. Upload the MicroPython script to the ESP32.
+2. Start the board to begin data collection.
+
+---
+
+## 🌟 Features
+- 📊 **Real-time data collection** from ESP32 sensors
+- 🧠 **Forecasting human accidents** using a hybrid CNN+LSTM model
+- 🌐 **Web-based monitoring** for visualization
+- 🔄 **Model retraining** with updated datasets
+
+---
+
+## 🔑 Notes
+- Make sure the ESP32 is connected to the same network as your computer for data transmission.
+- Use reliable sensor modules to ensure accurate data collection.
+- Flask should run in a virtual environment for better dependency management.
+
+---
+
+## 📜 Future Improvements
+- Extend the model to include more sensor data.
+- Deploy the web application to a cloud platform for wider accessibility.
+- Add mobile compatibility for monitoring on smartphones.
+
+Happy Coding! 🎉
