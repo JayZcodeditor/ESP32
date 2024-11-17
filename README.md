@@ -1,5 +1,5 @@
 
-# 🚑 Human Accident Forecasting System
+# 🚑 Activity-based risk monitoring system for elderly people
 
 ## 📖 Project Description
 This project aims to forecast human accidents using a **CNN+LSTM model**. The system utilizes an **ESP32 board** for data collection and processes the data using Python. It includes a web interface for monitoring and visualizing predictions.
@@ -55,38 +55,12 @@ Ensure the following are installed or available:
      FLASK_ENV=development
      ```
 
----
 
-## 📂 Project Structure
-```
-project_directory/
-├── data/               # Collected sensor data
-├── models/             # Trained CNN+LSTM model
-├── esp32/              # MicroPython scripts for ESP32
-├── web_app/            # Flask web application
-│   ├── templates/      # HTML templates
-│   ├── static/         # CSS/JS for UI
-├── app.py              # Main Flask app
-└── requirements.txt    # Python dependencies
-```
 
 ---
 
 ## 👨‍💻 Development and Usage
 
-### Running the Web Application
-1. Start the Flask server:
-   ```bash
-   flask run
-   ```
-2. Access the web application at `http://localhost:5000`.
-
-### Training the Model
-1. Prepare your dataset and place it in the `data/` directory.
-2. Run the training script:
-   ```bash
-   python train_model.py
-   ```
 
 ### Using the ESP32
 1. Upload the MicroPython script to the ESP32.
